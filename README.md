@@ -8,7 +8,6 @@ If you've ever shipped an Expo app and felt the dread of "did I configure everyt
 
 ---
 
-| ![](docs/images/dashboard.png) 
 ![ExpoPilot Dashboard](docs/images/dashboard.png)
 
 ## Table of Contents
