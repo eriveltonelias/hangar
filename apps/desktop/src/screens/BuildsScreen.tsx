@@ -8,9 +8,9 @@ import {
   Badge,
   ScrollArea,
   Button,
-} from "@expopilot/ui";
-import type { BuildRecord } from "@expopilot/core";
-import { parseBuildLog } from "@expopilot/core";
+} from "@hangar/ui";
+import type { BuildRecord } from "@hangar/core";
+import { parseBuildLog } from "@hangar/core";
 import { useAppStore, relativeTime } from "@/lib/store";
 import { fetchBuildLog } from "@/lib/eas-service";
 import { getCachedBuildLog, setCachedBuildLog } from "@/lib/build-log-cache";

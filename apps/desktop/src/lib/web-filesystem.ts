@@ -1,4 +1,4 @@
-import type { FileSystemAdapter } from "@expopilot/core";
+import type { FileSystemAdapter } from "@hangar/core";
 
 /**
  * Web mode (`pnpm dev:web`) has no real filesystem access - browsers can't
@@ -13,7 +13,7 @@ import type { FileSystemAdapter } from "@expopilot/core";
  * silently returning lies.
  */
 const NOT_AVAILABLE = new Error(
-  "Filesystem access is only available in the ExpoPilot desktop app.",
+  "Filesystem access is only available in the Hangar desktop app.",
 );
 
 export function webFileSystem(_projectPath: string): FileSystemAdapter {

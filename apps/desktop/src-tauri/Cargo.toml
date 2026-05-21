@@ -1,12 +1,12 @@
 [package]
-name = "expopilot-desktop"
+name = "hangar-desktop"
 version = "0.1.0"
-description = "ExpoPilot — Ship with confidence."
-authors = ["ExpoPilot"]
+description = "Hangar — Ship with confidence."
+authors = ["Hangar"]
 edition = "2021"
 
 [lib]
-name = "expopilot_desktop_lib"
+name = "hangar_desktop_lib"
 crate-type = ["staticlib", "cdylib", "rlib"]
 
 [build-dependencies]

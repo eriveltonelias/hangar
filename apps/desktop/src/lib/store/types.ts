@@ -9,7 +9,7 @@ import type {
   CredentialsReport,
   BundleSizeReport,
   BundleSizeSnapshot,
-} from "@expopilot/core";
+} from "@hangar/core";
 import type { EasData } from "../eas-service";
 import type { EasAuthStatus } from "../eas-auth";
 import type { HealthHistoryEntry } from "../services";

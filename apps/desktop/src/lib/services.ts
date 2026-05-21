@@ -1,5 +1,5 @@
-import type { AppSettings, FileSystemAdapter, ScanResult, RouterScanResult } from "@expopilot/core";
-import { scanProject, scanRouter } from "@expopilot/core";
+import type { AppSettings, FileSystemAdapter, ScanResult, RouterScanResult } from "@hangar/core";
+import { scanProject, scanRouter } from "@hangar/core";
 import { isTauri } from "./platform";
 import { formatError, normalizeProjectPath } from "./errors";
 import {
@@ -15,8 +15,8 @@ const DEFAULT_SETTINGS: AppSettings = {
   projects: [],
 };
 
-const SETTINGS_KEY = "expopilot-settings";
-const HEALTH_HISTORY_PREFIX = "expopilot-health-history:";
+const SETTINGS_KEY = "hangar-settings";
+const HEALTH_HISTORY_PREFIX = "hangar-health-history:";
 
 export interface HealthHistoryEntry {
   date: string;

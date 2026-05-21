@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { AlertTriangle } from "lucide-react";
-import { Button, Card, CardContent, CardHeader, CardTitle } from "@expopilot/ui";
+import { Button, Card, CardContent, CardHeader, CardTitle } from "@hangar/ui";
 import { useAppStore } from "@/lib/store";
 
 export function RemoveProjectDialog() {
@@ -39,7 +39,7 @@ export function RemoveProjectDialog() {
         </CardHeader>
         <CardContent className="space-y-4">
           <p className="text-sm text-muted-foreground">
-            This removes the project from ExpoPilot only. Your source code and files on disk are{" "}
+            This removes the project from Hangar only. Your source code and files on disk are{" "}
             <span className="font-medium text-foreground">not deleted</span> - you can add the folder
             back anytime.
           </p>
@@ -51,7 +51,7 @@ export function RemoveProjectDialog() {
               Cancel
             </Button>
             <Button variant="destructive" onClick={() => confirmRemoveProject()} disabled={isRemovingProject}>
-              {isRemovingProject ? "Removing…" : "Remove from ExpoPilot"}
+              {isRemovingProject ? "Removing…" : "Remove from Hangar"}
             </Button>
           </div>
         </CardContent>

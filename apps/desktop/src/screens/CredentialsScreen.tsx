@@ -7,7 +7,7 @@ import {
   CardTitle,
   Badge,
   Button,
-} from "@expopilot/ui";
+} from "@hangar/ui";
 import {
   AlertTriangle,
   CheckCircle2,
@@ -18,7 +18,7 @@ import {
   ShieldCheck,
   XCircle,
 } from "lucide-react";
-import type { CredentialsHealthStatus, MobileProvisionInfo } from "@expopilot/core";
+import type { CredentialsHealthStatus, MobileProvisionInfo } from "@hangar/core";
 import { useAppStore } from "@/lib/store";
 import { EmptyProject } from "@/components/shared";
 import { isTauri } from "@/lib/platform";

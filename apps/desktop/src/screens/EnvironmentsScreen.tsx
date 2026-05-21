@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle, Badge } from "@expopilot/ui";
+import { Card, CardContent, CardHeader, CardTitle, Badge } from "@hangar/ui";
 import { useAppStore } from "@/lib/store";
 import { EmptyProject } from "@/components/shared";
 import { AlertTriangle } from "lucide-react";
@@ -80,7 +80,7 @@ export function EnvironmentsScreen() {
         </CardHeader>
         <CardContent className="text-sm text-muted-foreground">
           <p>
-            ExpoPilot reads local <code className="font-mono text-xs text-foreground">.env*</code> files and flags
+            Hangar reads local <code className="font-mono text-xs text-foreground">.env*</code> files and flags
             production profiles that reference localhost, staging, or dev URLs.
           </p>
         </CardContent>

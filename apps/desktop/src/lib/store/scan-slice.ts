@@ -6,7 +6,7 @@ import {
   getSavedProjects,
   checkGitStatus,
 } from "../services";
-import { evaluateBuildVerification, type ExpoDoctorResult } from "@expopilot/core";
+import { evaluateBuildVerification, type ExpoDoctorResult } from "@hangar/core";
 import { scanCredentials as runCredentialsScan } from "../credentials-service";
 import { scanBundle as runBundleScan, loadBundleHistory, appendBundleHistory } from "../bundle-service";
 import { runProjectCommand } from "../services";

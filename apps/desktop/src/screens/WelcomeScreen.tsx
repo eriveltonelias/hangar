@@ -7,7 +7,7 @@ import {
   Plus,
   Zap,
 } from "lucide-react";
-import { Button } from "@expopilot/ui";
+import { Button } from "@hangar/ui";
 import { useAppStore } from "@/lib/store";
 
 const FEATURES = [
@@ -52,7 +52,7 @@ export function WelcomeScreen() {
             <Zap className="h-5 w-5 text-primary" />
           </div>
           <h1 className="text-2xl font-semibold tracking-tight text-foreground">
-            Welcome to ExpoPilot
+            Welcome to Hangar
           </h1>
           <p className="mx-auto mt-2 max-w-[420px] text-sm leading-relaxed text-muted-foreground">
             Add an Expo project folder to start scanning configuration, tracking EAS builds, and

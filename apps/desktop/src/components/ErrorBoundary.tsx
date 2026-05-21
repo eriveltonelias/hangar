@@ -26,7 +26,7 @@ export class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, info: ErrorInfo) {
     // Surface to the devtools console - Tauri webview still hooks console.error.
-    console.error("[ExpoPilot] Render error:", error, info.componentStack);
+    console.error("[Hangar] Render error:", error, info.componentStack);
   }
 
   private handleReset = () => this.setState({ error: null });
@@ -43,7 +43,7 @@ export class ErrorBoundary extends Component<Props, State> {
             <h3 className="text-sm font-semibold">Something went wrong on this screen</h3>
           </div>
           <p className="text-xs text-muted-foreground">
-            ExpoPilot caught a crash while rendering. Your project data is safe - only this
+            Hangar caught a crash while rendering. Your project data is safe - only this
             screen failed. Try refreshing or navigating elsewhere.
           </p>
           <pre className="max-h-40 overflow-auto rounded-md bg-background/60 p-3 text-[11px] leading-relaxed text-muted-foreground">

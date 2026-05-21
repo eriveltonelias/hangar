@@ -19,7 +19,7 @@ import {
   cn,
   Progress,
   ScrollArea,
-} from "@expopilot/ui";
+} from "@hangar/ui";
 import {
   evaluateDeployReadiness,
   getDeployStoreLabel,
@@ -29,7 +29,7 @@ import {
   type DeployRequirement,
   type DeployStore,
   type SubmitStrategyDetails,
-} from "@expopilot/core";
+} from "@hangar/core";
 import { useAppStore } from "@/lib/store";
 import { deployToStore, runTestFlight, loadProjectEasJson } from "@/lib/eas-service";
 import { notify } from "@/lib/notify";
@@ -222,7 +222,7 @@ function SubmitStrategyCard({ strategy }: { strategy: SubmitStrategyDetails }) {
             {iosCompletionSnippet}
           </pre>
           <p className="mt-2 text-[10px] text-zinc-400">
-            Option B — delete the entire <code className="font-mono text-zinc-200">submit.production.ios</code> block so ExpoPilot can use npx testflight.
+            Option B — delete the entire <code className="font-mono text-zinc-200">submit.production.ios</code> block so Hangar can use npx testflight.
           </p>
         </div>
       )}
@@ -362,7 +362,7 @@ export function DeployDialog({ open, onOpenChange }: DeployDialogProps) {
     }
 
     if (!isTauri()) {
-      setCheckError("Deploying requires the ExpoPilot desktop app.");
+      setCheckError("Deploying requires the Hangar desktop app.");
       setStep("blocked");
       return;
     }

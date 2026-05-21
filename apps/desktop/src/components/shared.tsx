@@ -1,5 +1,5 @@
-import { Badge, Button } from "@expopilot/ui";
-import type { Issue } from "@expopilot/core";
+import { Badge, Button } from "@hangar/ui";
+import type { Issue } from "@hangar/core";
 import { AlertTriangle, CheckCircle2, Info, Plus, XCircle } from "lucide-react";
 import { useAppStore } from "@/lib/store";
 

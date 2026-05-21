@@ -1,6 +1,6 @@
 import { useMemo } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@expopilot/ui";
-import { getExpoSdkStatus, getExpoSdkUpgradeCommand } from "@expopilot/core";
+import { Card, CardContent, CardHeader, CardTitle } from "@hangar/ui";
+import { getExpoSdkStatus, getExpoSdkUpgradeCommand } from "@hangar/core";
 import { useAppStore } from "@/lib/store";
 import { AlertTriangle, Package } from "lucide-react";
 

@@ -15,7 +15,7 @@ import {
   CardTitle,
   Badge,
   Button,
-} from "@expopilot/ui";
+} from "@hangar/ui";
 import {
   ArrowDownRight,
   ArrowUpRight,
@@ -32,7 +32,7 @@ import {
   formatBytes,
   type BundleCategoryStat,
   type BundleSizeReport,
-} from "@expopilot/core";
+} from "@hangar/core";
 import { useAppStore } from "@/lib/store";
 import { EmptyProject } from "@/components/shared";
 import { revealInFileManagerWithFeedback } from "@/lib/file-actions";
@@ -348,7 +348,7 @@ function EmptyBundle() {
           <p className="text-sm font-semibold">No bundle output yet</p>
           <p className="mt-1 text-xs text-muted-foreground">
             Run <code className="rounded bg-secondary/60 px-1 py-0.5 font-mono text-[11px]">npx expo export</code>{" "}
-            (or click the button above) to generate a <code className="font-mono">dist/</code> folder, then ExpoPilot
+            (or click the button above) to generate a <code className="font-mono">dist/</code> folder, then Hangar
             will read its size and track it over time.
           </p>
         </div>

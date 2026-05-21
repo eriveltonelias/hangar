@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Check, ChevronDown, FolderOpen, Plus, Trash2 } from "lucide-react";
-import { cn } from "@expopilot/ui";
+import { cn } from "@hangar/ui";
 import { useAppStore } from "@/lib/store";
 
 export function ProjectSwitcher() {
@@ -114,7 +114,7 @@ export function ProjectSwitcher() {
                     </div>
                     <button
                       type="button"
-                      title="Remove from ExpoPilot"
+                      title="Remove from Hangar"
                       onMouseDown={(event) => event.stopPropagation()}
                       onClick={(event) => handleRemove(event, project.path)}
                       disabled={busy}

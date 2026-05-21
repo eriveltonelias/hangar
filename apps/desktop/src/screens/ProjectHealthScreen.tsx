@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Card, CardContent, CardHeader, CardTitle, Tabs, TabsList, TabsTrigger, TabsContent } from "@expopilot/ui";
+import { Card, CardContent, CardHeader, CardTitle, Tabs, TabsList, TabsTrigger, TabsContent } from "@hangar/ui";
 import { useAppStore, getIssuesBySeverity, getActionableIssues } from "@/lib/store";
 import { SeverityBadge, SeverityIcon, ScoreRing, EmptyProject } from "@/components/shared";
 import { ExpoDoctorSection } from "@/components/ExpoDoctorSection";

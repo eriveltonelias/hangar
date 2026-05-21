@@ -23,7 +23,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@expopilot/ui";
+} from "@hangar/ui";
 import { useAppStore } from "@/lib/store";
 import { publishEasUpdate } from "@/lib/eas-service";
 import { notify } from "@/lib/notify";
@@ -172,7 +172,7 @@ export function PublishUpdateDialog({ open, onOpenChange }: PublishUpdateDialogP
     }
 
     if (!isTauri()) {
-      setCheckError("Publishing requires the ExpoPilot desktop app.");
+      setCheckError("Publishing requires the Hangar desktop app.");
       setStep("blocked");
       return;
     }

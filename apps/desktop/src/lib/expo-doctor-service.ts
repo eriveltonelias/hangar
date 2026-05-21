@@ -1,4 +1,4 @@
-import { parseExpoDoctorOutput, type ExpoDoctorResult } from "@expopilot/core";
+import { parseExpoDoctorOutput, type ExpoDoctorResult } from "@hangar/core";
 import { runProjectCommand } from "./services";
 import { formatError } from "./errors";
 import { isTauri } from "./platform";
@@ -10,7 +10,7 @@ export async function runExpoDoctor(projectPath: string): Promise<ExpoDoctorResu
       passed: 0,
       total: 0,
       checks: [],
-      error: "expo-doctor requires the ExpoPilot desktop app",
+      error: "expo-doctor requires the Hangar desktop app",
       ranAt: new Date().toISOString(),
     };
   }

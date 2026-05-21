@@ -1,5 +1,5 @@
-import type { ScanResult, RouterScanResult, ExpoDoctorResult, ExpoConfigResult, AppSettings, SavedProject } from "@expopilot/core";
-import { computeUpdateCompatibility, buildReleaseReadiness } from "@expopilot/core";
+import type { ScanResult, RouterScanResult, ExpoDoctorResult, ExpoConfigResult, AppSettings, SavedProject } from "@hangar/core";
+import { computeUpdateCompatibility, buildReleaseReadiness } from "@hangar/core";
 import {
   loadSettings,
   saveSettings,

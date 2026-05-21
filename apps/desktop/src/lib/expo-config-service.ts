@@ -1,4 +1,4 @@
-import { parseExpoConfigOutput, type ExpoConfigResult } from "@expopilot/core";
+import { parseExpoConfigOutput, type ExpoConfigResult } from "@hangar/core";
 import { runProjectCommand } from "./services";
 import { formatError } from "./errors";
 import { isTauri } from "./platform";
@@ -8,7 +8,7 @@ export async function runExpoConfigCheck(projectPath: string): Promise<ExpoConfi
     return {
       status: "error",
       ranAt: new Date().toISOString(),
-      error: "Expo config validation requires the ExpoPilot desktop app",
+      error: "Expo config validation requires the Hangar desktop app",
     };
   }
 

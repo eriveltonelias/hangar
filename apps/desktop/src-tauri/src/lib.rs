@@ -992,5 +992,5 @@ pub fn run() {
             unwatch_project,
         ])
         .run(tauri::generate_context!())
-        .expect("error while running ExpoPilot");
+        .expect("error while running Hangar");
 }

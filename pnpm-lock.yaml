@@ -10,10 +10,10 @@ importers:
 
   apps/desktop:
     dependencies:
-      '@expopilot/core':
+      '@hangar/core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@expopilot/ui':
+      '@hangar/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       '@tauri-apps/api':
@@ -71,7 +71,7 @@ importers:
 
   packages/cli:
     dependencies:
-      '@expopilot/core':
+      '@hangar/core':
         specifier: workspace:*
         version: link:../core
       chalk:

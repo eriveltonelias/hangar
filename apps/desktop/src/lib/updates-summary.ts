@@ -1,4 +1,4 @@
-import type { BuildRecord, UpdateRecord } from "@expopilot/core";
+import type { BuildRecord, UpdateRecord } from "@hangar/core";
 
 export type UpdatePlatform = "ios" | "android";
 export type DeliveryStatus = "will-deliver" | "wont-deliver" | "no-build" | "no-update";

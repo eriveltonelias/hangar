@@ -8,14 +8,14 @@ import {
   formatScanReportMarkdown,
   doctorSummary,
   formatRouterTree,
-} from "@expopilot/core";
-import { createNodeFileSystem } from "@expopilot/core/node";
+} from "@hangar/core";
+import { createNodeFileSystem } from "@hangar/core/node";
 
 const program = new Command();
 
 program
-  .name("expopilot")
-  .description("ExpoPilot CLI - Ship with confidence.")
+  .name("hangar")
+  .description("Hangar CLI - Ship with confidence.")
   .version("0.1.0");
 
 program
@@ -96,7 +96,7 @@ program
     const fs = createNodeFileSystem(projectPath);
     const result = await scanProject(projectPath, fs);
 
-    console.log(chalk.bold(`\nExpoPilot Doctor - ${result.projectName}\n`));
+    console.log(chalk.bold(`\nHangar Doctor - ${result.projectName}\n`));
     console.log(`  Score: ${colorScore(result.healthScore)}/100`);
     console.log(`  ${doctorSummary(result)}\n`);
   });

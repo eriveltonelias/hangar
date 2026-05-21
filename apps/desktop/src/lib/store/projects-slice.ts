@@ -162,7 +162,7 @@ export function createProjectsSlice(
             });
             await get().hydrateProject(nextPath);
           } else {
-            // ExpoPilot is back to its empty state - treat the next first-add
+            // Hangar is back to its empty state - treat the next first-add
             // as a genuine first-run and re-arm the onboarding tour. Without
             // this, leftover localStorage from a previous session permanently
             // silences the tour for users who remove all their projects.

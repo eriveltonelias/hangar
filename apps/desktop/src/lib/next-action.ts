@@ -5,8 +5,8 @@ import type {
   UpdateCompatibility,
   CredentialsReport,
   BundleSizeSnapshot,
-} from "@expopilot/core";
-import { computeBundleDelta, formatBytes, getExpoSdkStatus } from "@expopilot/core";
+} from "@hangar/core";
+import { computeBundleDelta, formatBytes, getExpoSdkStatus } from "@hangar/core";
 import type { EasData } from "./eas-service";
 import type { EasAuthStatus } from "./eas-auth";
 
@@ -50,7 +50,7 @@ export function computeNextAction({
     return {
       tone: "info",
       title: "Scan your project to begin",
-      description: "ExpoPilot will read your project files locally and check ship readiness.",
+      description: "Hangar will read your project files locally and check ship readiness.",
       cta: { label: "Go to Project Health", screen: "health" },
     };
   }
@@ -83,7 +83,7 @@ export function computeNextAction({
       description:
         easAuth.state === "cli-not-found"
           ? "Run npm install -g eas-cli in your terminal, then refresh."
-          : "Run eas login in your terminal so ExpoPilot can read build and update history.",
+          : "Run eas login in your terminal so Hangar can read build and update history.",
       cta: { label: "Open Settings", screen: "settings" },
     };
   }

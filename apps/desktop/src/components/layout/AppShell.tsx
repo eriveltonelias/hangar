@@ -13,7 +13,7 @@ import {
   Package,
   Zap,
 } from "lucide-react";
-import { cn } from "@expopilot/ui";
+import { cn } from "@hangar/ui";
 import { useAppStore } from "@/lib/store";
 import { ProjectSwitcher } from "@/components/ProjectSwitcher";
 import { PublishUpdateDialog } from "@/components/PublishUpdateDialog";
@@ -112,7 +112,7 @@ export function Sidebar() {
           <Zap className="h-4 w-4 text-primary" />
         </div>
         <div>
-          <h1 className="text-sm font-semibold tracking-tight">ExpoPilot</h1>
+          <h1 className="text-sm font-semibold tracking-tight">Hangar</h1>
           <p className="text-[10px] text-muted-foreground">Ship with confidence.</p>
         </div>
       </div>

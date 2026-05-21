@@ -1,6 +1,6 @@
 import { create } from "zustand";
-import type { Issue } from "@expopilot/core";
-import { relativeTime } from "@expopilot/core";
+import type { Issue } from "@hangar/core";
+import { relativeTime } from "@hangar/core";
 import type { AppState } from "./types";
 import { computeInitialState } from "./helpers";
 import { createUiSlice } from "./ui-slice";

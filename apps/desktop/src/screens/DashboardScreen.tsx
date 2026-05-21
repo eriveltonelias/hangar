@@ -6,8 +6,8 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import { Card, CardContent, CardHeader, CardTitle } from "@expopilot/ui";
-import { getExpoSdkStatus } from "@expopilot/core";
+import { Card, CardContent, CardHeader, CardTitle } from "@hangar/ui";
+import { getExpoSdkStatus } from "@hangar/core";
 import {
   Activity,
   Hammer,

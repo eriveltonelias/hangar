@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle, Badge, Progress } from "@expopilot/ui";
+import { Card, CardContent, CardHeader, CardTitle, Badge, Progress } from "@hangar/ui";
 import { useAppStore } from "@/lib/store";
 import { ScoreRing, EmptyProject } from "@/components/shared";
 import { Apple, Smartphone, CheckCircle2, Circle, AlertTriangle, Minus } from "lucide-react";

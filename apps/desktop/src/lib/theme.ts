@@ -1,4 +1,4 @@
-import type { AppSettings } from "@expopilot/core";
+import type { AppSettings } from "@hangar/core";
 import { isTauri } from "./platform";
 
 export type ThemePreference = AppSettings["theme"];

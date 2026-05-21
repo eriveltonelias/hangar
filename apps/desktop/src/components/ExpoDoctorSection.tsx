@@ -7,8 +7,8 @@ import {
   CardTitle,
   Badge,
   Button,
-} from "@expopilot/ui";
-import type { ExpoDoctorResult } from "@expopilot/core";
+} from "@hangar/ui";
+import type { ExpoDoctorResult } from "@hangar/core";
 import { useAppStore } from "@/lib/store";
 import { isTauri } from "@/lib/platform";
 import {
@@ -65,7 +65,7 @@ export function ExpoDoctorSection() {
         </CardHeader>
         <CardContent>
           <p className="text-sm text-muted-foreground">
-            Expo Doctor checks require the ExpoPilot desktop app.
+            Expo Doctor checks require the Hangar desktop app.
           </p>
         </CardContent>
       </Card>

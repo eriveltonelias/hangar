@@ -6,8 +6,8 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@expopilot/ui";
-import type { BuildVerificationCheck } from "@expopilot/core";
+} from "@hangar/ui";
+import type { BuildVerificationCheck } from "@hangar/core";
 import { useAppStore } from "@/lib/store";
 import { isTauri } from "@/lib/platform";
 import {

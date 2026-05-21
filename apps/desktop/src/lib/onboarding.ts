@@ -16,7 +16,7 @@ export const TOUR_STEPS: TourStep[] = [
     requiresScreen: "dashboard",
     title: "Your next step, always one click away",
     body:
-      "ExpoPilot ranks every signal - scan issues, expiring credentials, OTA mismatches, EAS auth - and surfaces the single most important thing here. Whenever you wonder \"what do I do now?\", look here first.",
+      "Hangar ranks every signal - scan issues, expiring credentials, OTA mismatches, EAS auth - and surfaces the single most important thing here. Whenever you wonder \"what do I do now?\", look here first.",
     placement: "bottom",
   },
   {
@@ -33,7 +33,7 @@ export const TOUR_STEPS: TourStep[] = [
     requiresScreen: "dashboard",
     title: "Switch environments here",
     body:
-      "Development, Preview, Production map to your EAS build profiles. Every screen in ExpoPilot filters its data to match - Updates shows the right branch, Releases shows the right channel, the Dashboard hero warns about the right runtime. Set this first.",
+      "Development, Preview, Production map to your EAS build profiles. Every screen in Hangar filters its data to match - Updates shows the right branch, Releases shows the right channel, the Dashboard hero warns about the right runtime. Set this first.",
     placement: "bottom",
   },
   {
@@ -55,7 +55,7 @@ export const TOUR_STEPS: TourStep[] = [
   },
 ];
 
-const STORAGE_KEY = "expopilot.tour.completed";
+const STORAGE_KEY = "hangar.tour.completed";
 
 export function hasCompletedTour(): boolean {
   try {

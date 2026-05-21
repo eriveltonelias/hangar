@@ -1,5 +1,5 @@
 {
-  "name": "@expopilot/desktop",
+  "name": "@hangar/desktop",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -11,8 +11,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@expopilot/core": "workspace:*",
-    "@expopilot/ui": "workspace:*",
+    "@hangar/core": "workspace:*",
+    "@hangar/ui": "workspace:*",
     "@tauri-apps/api": "2.11.0",
     "@tauri-apps/plugin-dialog": "2.7.1",
     "@tauri-apps/plugin-shell": "2.3.5",

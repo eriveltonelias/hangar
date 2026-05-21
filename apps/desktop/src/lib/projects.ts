@@ -1,4 +1,4 @@
-import type { AppSettings, SavedProject } from "@expopilot/core";
+import type { AppSettings, SavedProject } from "@hangar/core";
 
 export function projectFolderName(path: string): string {
   const normalized = path.replace(/\/+$/, "");

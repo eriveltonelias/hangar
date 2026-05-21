@@ -1,14 +1,14 @@
-# ExpoPilot
+# Hangar
 
 **Ship with confidence.**
 
-ExpoPilot is a desktop control center for Expo projects. It scans your codebase locally, surfaces configuration problems, run EAS builds and review update failures, inspects credentials and bundle size, and walks you through release preparation - all without uploading your source anywhere.
+Hangar is a desktop control center for Expo projects. It scans your codebase locally, surfaces configuration problems, run EAS builds and review update failures, inspects credentials and bundle size, and walks you through release preparation - all without uploading your source anywhere.
 
 If you've ever shipped an Expo app and felt the dread of "did I configure everything right?", this is built for you.
 
 ---
 
-![ExpoPilot Dashboard](docs/images/dashboard.png)
+![Hangar Dashboard](docs/images/dashboard.png)
 
 ## Table of Contents
 
@@ -40,22 +40,22 @@ If you've ever shipped an Expo app and felt the dread of "did I configure everyt
 
 ## Download
 
-Pre-built installers for every release are published on the [**Releases page**](https://github.com/eriveltonelias/expo-pilot/releases). Grab the file for your OS, install, and you're done - no toolchain required to just *use* the app.
+Pre-built installers for every release are published on the [**Releases page**](https://github.com/eriveltonelias/hangar/releases). Grab the file for your OS, install, and you're done - no toolchain required to just *use* the app.
 
 | Platform | File to download | Notes |
 | --- | --- | --- |
-| **macOS (Apple Silicon)** | `ExpoPilot_<version>_aarch64.dmg` | Open the `.dmg`, drag ExpoPilot to Applications. |
-| **macOS (Intel)** | `ExpoPilot_<version>_x64.dmg` | Same as above. |
-| **Windows 10/11 (x64)** | `ExpoPilot_<version>_x64-setup.exe` or `.msi` | Either works; the `.exe` is a smaller NSIS installer. |
-| **Linux (Debian / Ubuntu)** | `expopilot_<version>_amd64.deb` | `sudo dpkg -i expopilot_*.deb` |
-| **Linux (Fedora / RHEL)** | `expopilot-<version>-1.x86_64.rpm` | `sudo rpm -i expopilot-*.rpm` |
-| **Linux (any distro)** | `expopilot_<version>_amd64.AppImage` | `chmod +x` then double-click. |
+| **macOS (Apple Silicon)** | `Hangar_<version>_aarch64.dmg` | Open the `.dmg`, drag Hangar to Applications. |
+| **macOS (Intel)** | `Hangar_<version>_x64.dmg` | Same as above. |
+| **Windows 10/11 (x64)** | `Hangar_<version>_x64-setup.exe` or `.msi` | Either works; the `.exe` is a smaller NSIS installer. |
+| **Linux (Debian / Ubuntu)** | `hangar_<version>_amd64.deb` | `sudo dpkg -i hangar_*.deb` |
+| **Linux (Fedora / RHEL)** | `hangar-<version>-1.x86_64.rpm` | `sudo rpm -i hangar-*.rpm` |
+| **Linux (any distro)** | `hangar_<version>_amd64.AppImage` | `chmod +x` then double-click. |
 
-The latest release is always at [`/releases/latest`](https://github.com/eriveltonelias/expo-pilot/releases/latest). If you want to stay on the bleeding edge or help test, check the "Pre-release" entries.
+The latest release is always at [`/releases/latest`](https://github.com/eriveltonelias/hangar/releases/latest). If you want to stay on the bleeding edge or help test, check the "Pre-release" entries.
 
 **Unsigned binaries.** Until code signing is in place, first launch will show a Gatekeeper warning on macOS and a SmartScreen warning on Windows.
 
-- **macOS:** right-click the app → **Open** → **Open** in the dialog. Or, from the terminal: `xattr -dr com.apple.quarantine /Applications/ExpoPilot.app`.
+- **macOS:** right-click the app → **Open** → **Open** in the dialog. Or, from the terminal: `xattr -dr com.apple.quarantine /Applications/Hangar.app`.
 - **Windows:** click **More info** → **Run anyway** in the SmartScreen popup.
 
 Prefer to build from source? See [Getting Started](#getting-started) below.
@@ -82,7 +82,7 @@ Add the source line to your `~/.zshrc` or `~/.bashrc` so new terminals pick up R
 ```bash
 # 1. Clone and install
 git clone <repo-url>
-cd expo-pilot
+cd hangar
 pnpm install
 
 # 2. Run the desktop app (Tauri - first run compiles Rust, ~1–2 min)
@@ -96,7 +96,7 @@ On first launch the app will ask you to register an Expo project directory - pic
 ## Project Structure
 
 ```
-expo-pilot/
+hangar/
 ├── apps/
 │   └── desktop/              # Tauri v2 + React 19 + Vite + Tailwind 4
 │       ├── src/
@@ -115,7 +115,7 @@ expo-pilot/
 │   │       ├── credentials/  # provisioning expiry analysis
 │   │       ├── adapters/     # FileSystemAdapter (node impl)
 │   │       └── types/        # Shared TS types
-│   ├── cli/                  # commander + chalk CLI on top of @expopilot/core
+│   ├── cli/                  # commander + chalk CLI on top of @hangar/core
 │   └── ui/                   # Shared component library (Tailwind + CVA)
 ├── pnpm-workspace.yaml
 └── tsconfig.base.json
@@ -123,7 +123,7 @@ expo-pilot/
 
 ## Architecture Overview
 
-- **`@expopilot/core` is I/O-agnostic.** Scanners take a `FileSystemAdapter` so the same code runs in Node (CLI), Tauri (desktop), or memory (tests).
+- **`@hangar/core` is I/O-agnostic.** Scanners take a `FileSystemAdapter` so the same code runs in Node (CLI), Tauri (desktop), or memory (tests).
 - **Desktop app talks to the OS via Tauri.** Shelling out to `expo`, `eas`, reading files, watching folders - all goes through Tauri commands on the Rust side. The React app stays a normal Vite SPA.
 - **State lives in zustand.** See `apps/desktop/src/lib/store` for the slices (projects, scan, ui, onboarding, toasts).
 - **Public APIs are explicit.** `packages/core/src/index.ts` and `packages/core/src/node.ts` are the only entry points; everything else is internal.
@@ -132,7 +132,7 @@ expo-pilot/
 
 ```bash
 pnpm dev                       # desktop (Tauri)
-pnpm --filter @expopilot/core dev   # rebuild core in watch mode
+pnpm --filter @hangar/core dev   # rebuild core in watch mode
 
 pnpm typecheck                 # all packages
 pnpm test                      # run vitest in every package that has tests
@@ -155,8 +155,8 @@ The core scanner engine is covered by [Vitest](https://vitest.dev). Tests live n
 
 ```bash
 pnpm test                              # run every package's tests
-pnpm --filter @expopilot/core test     # core only
-pnpm --filter @expopilot/core test:watch
+pnpm --filter @hangar/core test     # core only
+pnpm --filter @hangar/core test:watch
 ```
 
 What's covered today:
@@ -169,11 +169,11 @@ What's covered today:
 - `eas/deploy-readiness` - deploy command + store label generation.
 - `scanners/router-links` - navigable-route classification, deep link / example path / query helpers.
 
-When changing any of those modules, run `pnpm --filter @expopilot/core test:watch` for fast feedback. New behaviour should land with a test that fails without the change.
+When changing any of those modules, run `pnpm --filter @hangar/core test:watch` for fast feedback. New behaviour should land with a test that fails without the change.
 
 ## Privacy
 
-All project scanning is **local-first**. No source code, file paths, or scan results are uploaded to any external service. EAS-related commands talk directly to your local `eas` CLI, which uses your existing Expo credentials. ExpoPilot has no telemetry endpoint.
+All project scanning is **local-first**. No source code, file paths, or scan results are uploaded to any external service. EAS-related commands talk directly to your local `eas` CLI, which uses your existing Expo credentials. Hangar has no telemetry endpoint.
 
 ## Troubleshooting
 
@@ -207,7 +207,7 @@ Contributions are welcome - bug reports, scan rules, screen improvements, and do
 
 ```bash
 git clone <repo-url>
-cd expo-pilot
+cd hangar
 pnpm install
 pnpm typecheck        # sanity check
 pnpm dev              # launches the Tauri desktop app
@@ -224,7 +224,7 @@ You should be able to launch the app, scan an Expo project on your machine, and 
 ### Coding standards
 
 - **TypeScript everywhere.** Avoid `any`; prefer narrow types and `unknown` at boundaries.
-- **`@expopilot/core` stays pure.** No `node:fs`, no Tauri imports, no React. Anything that touches the disk goes behind a `FileSystemAdapter` or moves to `core/node.ts`.
+- **`@hangar/core` stays pure.** No `node:fs`, no Tauri imports, no React. Anything that touches the disk goes behind a `FileSystemAdapter` or moves to `core/node.ts`.
 - **Tailwind for styling.** Reuse the components in `packages/ui` before creating new ones. If you need a new primitive, add it to `packages/ui/src/components` and export it from `packages/ui/src/index.ts`.
 - **Run `pnpm typecheck` before pushing.** CI will run it too, but local feedback is faster.
 - **No dead code.** Don't merge unused exports, files, or imports - strip them in the same PR.
@@ -257,7 +257,7 @@ Before requesting review, make sure:
 
 When opening an issue, please include:
 
-- ExpoPilot version (or commit SHA) and OS.
+- Hangar version (or commit SHA) and OS.
 - Node, pnpm, and (if relevant) Rust versions.
 - The Expo SDK version of the project you were scanning.
 - Steps to reproduce, expected vs. actual behavior.

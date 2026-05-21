@@ -8,8 +8,8 @@ import {
   Badge,
   ScrollArea,
   Button,
-} from "@expopilot/ui";
-import type { UpdateRecord } from "@expopilot/core";
+} from "@hangar/ui";
+import type { UpdateRecord } from "@hangar/core";
 import { useAppStore, relativeTime } from "@/lib/store";
 import { EasLoginRequired } from "@/components/EasLoginRequired";
 import { isTauri } from "@/lib/platform";

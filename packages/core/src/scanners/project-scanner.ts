@@ -79,7 +79,7 @@ async function detectPackageManager(
 
 export function formatScanReportMarkdown(result: ScanResult): string {
   const lines: string[] = [
-    `# ExpoPilot Health Report: ${result.projectName}`,
+    `# Hangar Health Report: ${result.projectName}`,
     "",
     `**Health Score:** ${result.healthScore}/100`,
     `**Scanned:** ${result.metadata.scannedAt}`,

@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle, Button } from "@expopilot/ui";
+import { Card, CardContent, CardHeader, CardTitle, Button } from "@hangar/ui";
 import { Terminal, RefreshCw, LogIn } from "lucide-react";
 import { useAppStore } from "@/lib/store";
 import {

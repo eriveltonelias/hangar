@@ -81,7 +81,7 @@ export function getSubmitStrategy(
         strategy: "testflight",
         label: "TestFlight (zero-config)",
         description:
-          "Your eas.json has no submit profile for iOS, so ExpoPilot will use npx testflight - Expo's zero-config flow that builds and uploads to TestFlight. First run may prompt for Apple credentials.",
+          "Your eas.json has no submit profile for iOS, so Hangar will use npx testflight - Expo's zero-config flow that builds and uploads to TestFlight. First run may prompt for Apple credentials.",
       };
     }
     const missing = iosMissingFields(storeConfig!);
@@ -92,18 +92,18 @@ export function getSubmitStrategy(
         description: `Build with the ${profile} profile, then submit to the App Store using your eas.json submit.${profile}.ios credentials.`,
       };
     }
-    // Partial iOS submit profile is a hard block from ExpoPilot specifically:
+    // Partial iOS submit profile is a hard block from Hangar specifically:
     // `npx testflight` works fine in a terminal because EAS detects the TTY
-    // and prompts the user for the missing field (e.g. ascAppId). ExpoPilot
+    // and prompts the user for the missing field (e.g. ascAppId). Hangar
     // spawns commands as subprocesses with piped stdio - no TTY - so EAS
     // refuses to prompt and errors with "Set ascAppId in the submit profile
     // (eas.json) or re-run this command in interactive mode." The only fix
-    // available from ExpoPilot today is to put the field in eas.json so the
+    // available from Hangar today is to put the field in eas.json so the
     // command can run non-interactively.
     return {
       strategy: "missing",
       label: "iOS submit profile incomplete",
-      description: `Your submit.${profile}.ios block is missing ${missing.join(", ")}. EAS needs ${missing.length === 1 ? "this" : "these"} field${missing.length === 1 ? "" : "s"} to submit non-interactively. ExpoPilot can't prompt for ${missing.length === 1 ? "it" : "them"} (no terminal attached to the subprocess), so add ${missing.length === 1 ? "the value" : "the values"} to eas.json once - then every future deploy works automatically. Running \`npx testflight\` directly in your terminal works for the same reason: it prompts you, ExpoPilot can't.`,
+      description: `Your submit.${profile}.ios block is missing ${missing.join(", ")}. EAS needs ${missing.length === 1 ? "this" : "these"} field${missing.length === 1 ? "" : "s"} to submit non-interactively. Hangar can't prompt for ${missing.length === 1 ? "it" : "them"} (no terminal attached to the subprocess), so add ${missing.length === 1 ? "the value" : "the values"} to eas.json once - then every future deploy works automatically. Running \`npx testflight\` directly in your terminal works for the same reason: it prompts you, Hangar can't.`,
       missingFields: missing,
     };
   }

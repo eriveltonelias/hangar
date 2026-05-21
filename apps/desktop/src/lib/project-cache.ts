@@ -1,4 +1,4 @@
-import type { ScanResult, RouterScanResult, ExpoDoctorResult, ExpoConfigResult } from "@expopilot/core";
+import type { ScanResult, RouterScanResult, ExpoDoctorResult, ExpoConfigResult } from "@hangar/core";
 import type { EasData } from "./eas-service";
 import { isTauri } from "./platform";
 
@@ -22,8 +22,8 @@ export interface EasCacheSnapshot {
   cachedAt: string;
 }
 
-const WEB_PROJECT_CACHE_PREFIX = "expopilot-project-cache:";
-const WEB_EAS_CACHE_PREFIX = "expopilot-eas-cache:";
+const WEB_PROJECT_CACHE_PREFIX = "hangar-project-cache:";
+const WEB_EAS_CACHE_PREFIX = "hangar-eas-cache:";
 
 function webProjectCacheKey(projectPath: string): string {
   return `${WEB_PROJECT_CACHE_PREFIX}${projectPath}`;

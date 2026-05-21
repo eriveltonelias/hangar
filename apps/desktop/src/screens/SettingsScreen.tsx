@@ -1,11 +1,11 @@
-import { Card, CardContent, CardHeader, CardTitle, Label, Input, Select, SelectTrigger, SelectValue, SelectContent, SelectItem, Button } from "@expopilot/ui";
+import { Card, CardContent, CardHeader, CardTitle, Label, Input, Select, SelectTrigger, SelectValue, SelectContent, SelectItem, Button } from "@hangar/ui";
 import { useAppStore } from "@/lib/store";
 import { checkEasCliInstalled } from "@/lib/services";
 import { EasLoginRequired } from "@/components/EasLoginRequired";
 import { isTauri } from "@/lib/platform";
 import { Shield, Plus, Trash2, Check, Compass } from "lucide-react";
 import { useState } from "react";
-import { cn } from "@expopilot/ui";
+import { cn } from "@hangar/ui";
 
 export function SettingsScreen() {
   const settings = useAppStore((s) => s.settings);
@@ -45,7 +45,7 @@ export function SettingsScreen() {
     <div className="mx-auto max-w-2xl space-y-6 p-6">
       <div>
         <h2 className="text-xl font-semibold tracking-tight">Settings</h2>
-        <p className="text-sm text-muted-foreground">Configure ExpoPilot preferences</p>
+        <p className="text-sm text-muted-foreground">Configure Hangar preferences</p>
       </div>
 
       <Card>
@@ -86,7 +86,7 @@ export function SettingsScreen() {
                         variant="secondary"
                         size="icon"
                         onClick={() => requestRemoveProject(project.path)}
-                        title="Remove from ExpoPilot"
+                        title="Remove from Hangar"
                       >
                         <Trash2 className="h-4 w-4" />
                       </Button>
@@ -242,7 +242,7 @@ export function SettingsScreen() {
         </CardHeader>
         <CardContent className="text-sm text-muted-foreground space-y-2">
           <p>
-            ExpoPilot scans your project locally. Source code is never uploaded to external services.
+            Hangar scans your project locally. Source code is never uploaded to external services.
           </p>
           <p>
             EAS tokens are not stored in plain text. Command execution is scoped to your selected project folder.

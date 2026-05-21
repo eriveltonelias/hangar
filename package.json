@@ -1,14 +1,14 @@
 {
-  "name": "expopilot",
+  "name": "hangar",
   "private": true,
   "version": "0.1.0",
   "description": "Ship with confidence. Desktop control center for Expo / React Native apps.",
   "scripts": {
-    "dev": "pnpm --filter @expopilot/desktop dev",
+    "dev": "pnpm --filter @hangar/desktop dev",
     "build": "pnpm -r build",
-    "build:core": "pnpm --filter @expopilot/core build",
-    "build:desktop": "pnpm --filter @expopilot/desktop build",
-    "cli": "pnpm --filter @expopilot/cli start",
+    "build:core": "pnpm --filter @hangar/core build",
+    "build:desktop": "pnpm --filter @hangar/desktop build",
+    "cli": "pnpm --filter @hangar/cli start",
     "typecheck": "pnpm -r typecheck",
     "test": "pnpm -r --if-present test",
     "lint": "pnpm -r lint"

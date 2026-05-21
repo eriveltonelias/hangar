@@ -14,7 +14,7 @@ import {
   Search,
   X,
 } from "lucide-react";
-import { cn } from "@expopilot/ui";
+import { cn } from "@hangar/ui";
 
 const MAX_RENDERED_LINES = 10_000;
 const ERROR_PATTERN =

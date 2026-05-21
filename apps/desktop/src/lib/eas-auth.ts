@@ -31,9 +31,9 @@ export function easAuthTitle(state: EasAuthStatus["state"]): string {
 
 export function easAuthDescription(state: EasAuthStatus["state"]): string {
   if (state === "cli-not-found") {
-    return "ExpoPilot uses the EAS CLI to load builds, updates, and release data. Install it first, then log in.";
+    return "Hangar uses the EAS CLI to load builds, updates, and release data. Install it first, then log in.";
   }
-  return "ExpoPilot reads EAS data through the CLI on your machine. Sign in via the terminal to continue.";
+  return "Hangar reads EAS data through the CLI on your machine. Sign in via the terminal to continue.";
 }
 
 const LOGIN_ERROR_PATTERNS = [

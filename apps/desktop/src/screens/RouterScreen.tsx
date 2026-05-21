@@ -1,11 +1,11 @@
 import { useMemo, useState } from "react";
-import type { RouteNode, RouteDeepLinkSchema, DeepLinkParamGuide } from "@expopilot/core";
+import type { RouteNode, RouteDeepLinkSchema, DeepLinkParamGuide } from "@hangar/core";
 import {
   collectDeepLinkSchemas,
   buildRouteDeepLinkSchema,
   buildDeepLinkParamGuide,
   getRouteBreadcrumb,
-} from "@expopilot/core";
+} from "@hangar/core";
 import {
   Card,
   CardContent,
@@ -15,7 +15,7 @@ import {
   Badge,
   ScrollArea,
   Button,
-} from "@expopilot/ui";
+} from "@hangar/ui";
 import { useAppStore } from "@/lib/store";
 import { EmptyProject, SeverityBadge } from "@/components/shared";
 import {

@@ -1,5 +1,5 @@
 import { LogIn, RefreshCw, Terminal } from "lucide-react";
-import { Button } from "@expopilot/ui";
+import { Button } from "@hangar/ui";
 import { useAppStore } from "@/lib/store";
 import { EAS_LOGIN_STEPS, easAuthDescription, easAuthTitle } from "@/lib/eas-auth";
 
@@ -66,7 +66,7 @@ export function EasWelcomeScreen() {
               {isCheckingEasAuth ? "Checking login…" : "I've signed - check again"}
             </Button>
             <p className="text-center text-xs text-muted-foreground sm:text-left">
-              ExpoPilot will continue once EAS login is detected.
+              Hangar will continue once EAS login is detected.
             </p>
           </div>
         </section>

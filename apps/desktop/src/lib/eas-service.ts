@@ -5,7 +5,7 @@ import type {
   ReleaseReadiness,
   ScanResult,
   FileSystemAdapter,
-} from "@expopilot/core";
+} from "@hangar/core";
 import {
   parseEasBuilds,
   parseEasUpdates,
@@ -23,7 +23,7 @@ import {
   type UpdateInspectorData,
   type StoreRelease,
   type EasProjectInfoRaw,
-} from "@expopilot/core";
+} from "@hangar/core";
 import {
   runEasCommand,
   runEasCommandStreaming,

@@ -1,9 +1,9 @@
-import type { BundleSizeRaw, BundleSizeReport, BundleSizeSnapshot } from "@expopilot/core";
-import { buildBundleReport } from "@expopilot/core";
+import type { BundleSizeRaw, BundleSizeReport, BundleSizeSnapshot } from "@hangar/core";
+import { buildBundleReport } from "@hangar/core";
 import { isTauri } from "./platform";
 import { formatError } from "./errors";
 
-const HISTORY_PREFIX = "expopilot-bundle-history:";
+const HISTORY_PREFIX = "hangar-bundle-history:";
 const MAX_HISTORY = 50;
 
 function historyKey(projectPath: string): string {

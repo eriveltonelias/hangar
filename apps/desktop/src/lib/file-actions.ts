@@ -1,4 +1,4 @@
-import type { AppSettings } from "@expopilot/core";
+import type { AppSettings } from "@hangar/core";
 import { openInEditor, revealInFileManager } from "./services";
 import { toast } from "./notify";
 

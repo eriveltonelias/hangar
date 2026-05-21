@@ -1,5 +1,5 @@
-import type { CredentialsReport, CredentialsScanRaw } from "@expopilot/core";
-import { buildCredentialsReport } from "@expopilot/core";
+import type { CredentialsReport, CredentialsScanRaw } from "@hangar/core";
+import { buildCredentialsReport } from "@hangar/core";
 import { isTauri } from "./platform";
 import { formatError } from "./errors";
 
