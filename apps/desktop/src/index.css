@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-background: var(--theme-background);
+  --color-foreground: var(--theme-foreground);
+  --color-card: var(--theme-card);
+  --color-card-foreground: var(--theme-card-foreground);
+  --color-popover: var(--theme-popover);
+  --color-popover-foreground: var(--theme-popover-foreground);
+  --color-primary: var(--theme-primary);
+  --color-primary-foreground: var(--theme-primary-foreground);
+  --color-secondary: var(--theme-secondary);
+  --color-secondary-foreground: var(--theme-secondary-foreground);
+  --color-muted: var(--theme-muted);
+  --color-muted-foreground: var(--theme-muted-foreground);
+  --color-accent: var(--theme-accent);
+  --color-accent-foreground: var(--theme-accent-foreground);
+  --color-destructive: var(--theme-destructive);
+  --color-warning: var(--theme-warning);
+  --color-success: var(--theme-success);
+  --color-border: var(--theme-border);
+  --color-ring: var(--theme-ring);
+  --color-sidebar: var(--theme-sidebar);
+  --color-sidebar-border: var(--theme-sidebar-border);
+}
+
+:root.dark {
+  color-scheme: dark;
+
+  --theme-background: #0a0a0f;
+  --theme-foreground: #f4f4f5;
+  --theme-card: #111118;
+  --theme-card-foreground: #f4f4f5;
+  --theme-popover: #16161f;
+  --theme-popover-foreground: #f4f4f5;
+  --theme-primary: #3b82f6;
+  --theme-primary-foreground: #ffffff;
+  --theme-secondary: #1a1a24;
+  --theme-secondary-foreground: #a1a1aa;
+  --theme-muted: #18181f;
+  --theme-muted-foreground: #71717a;
+  --theme-accent: #1e1e2a;
+  --theme-accent-foreground: #f4f4f5;
+  --theme-destructive: #ef4444;
+  --theme-warning: #f59e0b;
+  --theme-success: #22c55e;
+  --theme-border: #27272f;
+  --theme-ring: #3b82f6;
+  --theme-sidebar: #0d0d12;
+  --theme-sidebar-border: #1f1f28;
+
+  --scrollbar-thumb: #27272f;
+  --scrollbar-thumb-hover: #3f3f46;
+  --theme-terminal: #0d0d12;
+}
+
+:root.light {
+  color-scheme: light;
+
+  --theme-background: #f8fafc;
+  --theme-foreground: #0f172a;
+  --theme-card: #ffffff;
+  --theme-card-foreground: #0f172a;
+  --theme-popover: #ffffff;
+  --theme-popover-foreground: #0f172a;
+  --theme-primary: #2563eb;
+  --theme-primary-foreground: #ffffff;
+  --theme-secondary: #f1f5f9;
+  --theme-secondary-foreground: #475569;
+  --theme-muted: #f1f5f9;
+  --theme-muted-foreground: #64748b;
+  --theme-accent: #e2e8f0;
+  --theme-accent-foreground: #0f172a;
+  --theme-destructive: #dc2626;
+  --theme-warning: #d97706;
+  --theme-success: #16a34a;
+  --theme-border: #e2e8f0;
+  --theme-ring: #2563eb;
+  --theme-sidebar: #f1f5f9;
+  --theme-sidebar-border: #e2e8f0;
+
+  --scrollbar-thumb: #cbd5e1;
+  --scrollbar-thumb-hover: #94a3b8;
+  --theme-terminal: #0f172a;
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+html {
+  background: var(--color-background);
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-background);
+  color: var(--color-foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.3), rgba(34, 197, 94, 0.2));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.glow-blue {
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.08);
+}
+
+.glow-green {
+  box-shadow: 0 0 40px rgba(34, 197, 94, 0.08);
+}
+
+.bg-terminal {
+  background: var(--theme-terminal);
+}

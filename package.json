@@ -1,0 +1,21 @@
+{
+  "name": "expopilot",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Ship with confidence. Desktop control center for Expo / React Native apps.",
+  "scripts": {
+    "dev": "pnpm --filter @expopilot/desktop dev",
+    "build": "pnpm -r build",
+    "build:core": "pnpm --filter @expopilot/core build",
+    "build:desktop": "pnpm --filter @expopilot/desktop build",
+    "cli": "pnpm --filter @expopilot/cli start",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r --if-present test",
+    "lint": "pnpm -r lint"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  },
+  "packageManager": "pnpm@10.33.0"
+}

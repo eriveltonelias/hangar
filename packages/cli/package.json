@@ -1,0 +1,25 @@
+{
+  "name": "@expopilot/cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "expopilot": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --clean",
+    "start": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@expopilot/core": "workspace:*",
+    "commander": "13.1.0",
+    "chalk": "5.6.2"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.19",
+    "tsup": "8.5.1",
+    "tsx": "4.22.3",
+    "typescript": "5.9.3"
+  }
+}

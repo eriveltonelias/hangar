@@ -1,0 +1,24 @@
+[[permission]]
+identifier = "allow-project-files"
+description = "Read project files for local Expo scanning."
+commands.allow = [
+  "validate_project_folder",
+  "file_exists",
+  "read_file",
+  "read_dir",
+  "is_directory",
+  "check_eas_cli",
+  "check_eas_login",
+  "check_git_status",
+  "scan_credentials",
+  "scan_bundle_size",
+  "reveal_in_file_manager",
+  "run_command",
+  "run_command_streaming",
+  "open_in_editor",
+  "read_cache",
+  "write_cache",
+  "delete_cache",
+  "watch_project",
+  "unwatch_project",
+]

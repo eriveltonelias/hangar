@@ -1,0 +1,36 @@
+{
+  "name": "@expopilot/desktop",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tauri dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@expopilot/core": "workspace:*",
+    "@expopilot/ui": "workspace:*",
+    "@tauri-apps/api": "2.11.0",
+    "@tauri-apps/plugin-dialog": "2.7.1",
+    "@tauri-apps/plugin-shell": "2.3.5",
+    "lucide-react": "0.511.0",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "react-router-dom": "7.15.1",
+    "recharts": "2.15.4",
+    "zustand": "5.0.13"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.3.0",
+    "@tauri-apps/cli": "2.11.2",
+    "@types/react": "19.2.15",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "4.7.0",
+    "tailwindcss": "4.3.0",
+    "typescript": "5.9.3",
+    "vite": "6.4.2"
+  }
+}
